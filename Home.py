@@ -96,6 +96,66 @@ st.info(
 )
 
 st.divider()
+st.subheader("The Wood Lovers Paralysis question — where the evidence stands")
+st.markdown(
+    "Wood Lovers Paralysis (WLP) is a rare, reversible weakness/paralysis reported after eating "
+    "certain **wood-inhabiting** *Psilocybe* — the Australian *P. subaeruginosa* and the "
+    "Northern-Hemisphere *P. azurescens* / *P. cyanescens* among them. Paralysis after magic "
+    "mushrooms was first described in 1973 for the wood-inhabiting *P. subcaerulipes*; the "
+    "colloquial term is more recent (Dörner *et al.* 2022). **No causative compound has been "
+    "identified.** The leading idea, on structural grounds, is that the quaternary "
+    "trimethylammonium tryptamine **aeruginascin** — or its dephosphorylated congener "
+    "**4-OH-TMT** — might behave like the paralytic quaternary alkaloid **bufotenidine**, to "
+    "which it is structurally analogous (the aeruginascin/bufotenidine analogy is the basis of "
+    "the hypothesis, e.g. Beck & Barlow)."
+)
+st.markdown(
+    "Two findings keep this **hypothetical, not established** — and both come from analytical "
+    "chemistry:\n"
+    "- **The chemistry is not wood-lover-specific.** In the Hoffmeister lab's LC-MS survey, "
+    "aeruginascin was detected in *P. mexicana* and *P. cyanescens*, and — consistent with "
+    "earlier work — **also in the dung-inhabiting, non-paralytic *P. cubensis***. The paper "
+    "notes explicitly that *no WLP report pertains to P. cubensis* (Dörner *et al.* 2022). So "
+    "the presence of aeruginascin alone does not track with the paralysis.\n"
+    "- **The putative active metabolite is not found in the mushroom.** In the same survey the "
+    "dephosphorylated congener **4-OH-TMT was not detected in any of the species examined** "
+    "(Dörner *et al.* 2022) — it is a hypothesized in-body conversion product, not a measured "
+    "fungal metabolite. And where 4-OH-TMT has been synthesized and receptor-profiled, its "
+    "pharmacology does not cleanly reproduce bufotenidine's (Chadeayne *et al.* 2020)."
+)
+st.markdown(
+    "As of this writing, the WLP causative agent remains **unidentified**, and aeruginascin is "
+    "a leading candidate on structural grounds that analytical chemistry has not confirmed. "
+    "This is where comparative genomics can *contribute*, not *resolve*: a reference-grade "
+    "psilocybin cluster from a **non-wood-loving** African relative (this study) is a baseline "
+    "against which the biosynthetic gene complement of the **wood-loving** *P. subaeruginosa* "
+    "clade (McTaggart *et al.* 2024) can be compared, asking whether any enzyme difference "
+    "could plausibly redirect tryptamine chemistry. It does not, by itself, identify a toxin — "
+    "and **we make no claim that *P. natalensis* causes or relates to WLP.**"
+)
+with st.expander("References"):
+    st.markdown(
+        "- **Dörner S, Rogge K, Wick J, Hoffmeister D, *et al.* (2022).** Genetic Survey of "
+        "*Psilocybe* Natural Products. *ChemBioChem* 23. doi:10.1002/cbic.202200249. "
+        "*(LC-MS: aeruginascin in P. mexicana / P. cyanescens and in P. cubensis; 4-OH-TMT not "
+        "detected in any species; notes no WLP report pertains to P. cubensis.)*\n"
+        "- **Chadeayne AR, Golen JA, Manke DR (2020).** Active Metabolite of Aeruginascin "
+        "(4-Hydroxy-*N,N,N*-trimethyltryptamine): Synthesis, Structure, and Serotonergic Binding "
+        "Affinity. *ACS Omega* 5:16940–16943. doi:10.1021/acsomega.0c02208.\n"
+        "- **McTaggart AR *et al.* (2024).** Wood-loving magic mushrooms (*P. subaeruginosa* "
+        "group) from Australia are saprotrophic invaders in the Northern Hemisphere. "
+        "*(source of the wood-lover clade we are integrating.)*\n"
+        "- The aeruginascin–bufotenidine structural analogy underpinning the WLP hypothesis is "
+        "commonly attributed to S. Beck & J. Barlow; the primary bufotenidine neuromuscular "
+        "pharmacology derives from earlier *Arundo donax* studies. **These secondary/primary "
+        "references are cited here from summary sources and have not been individually verified "
+        "against the original papers** — treat the specific attributions as provisional.\n\n"
+        "*Bottom line: aeruginascin is detectable by LC-MS but is not wood-lover-specific; the "
+        "hypothesized active metabolite (4-OH-TMT) has not been detected in the mushrooms; no "
+        "analytical study has yet identified the compound responsible for WLP.*"
+    )
+
+st.divider()
 st.subheader("Resources & credits")
 st.markdown(
     "- **[psilocydia.net](https://psilocydia.net/)** — 117 public *Psilocybe* genomes; a "
