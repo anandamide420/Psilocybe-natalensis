@@ -86,6 +86,15 @@ st.info(
     icon="⚠️",
 )
 
+st.info(
+    "**Data availability & roadmap.** Raw DNA sequence data will be made available shortly. "
+    "We are currently integrating the *P. subaeruginosa* data from McTaggart *et al.* — the "
+    "Australian wood-inhabiting clade linked to Wood Lovers Paralysis — for direct "
+    "psilocybin-cluster comparison, and **this page will continue to update** as the full "
+    "17 Gb assembly and additional taxa are analyzed.",
+    icon="🔄",
+)
+
 st.divider()
 st.subheader("Resources & credits")
 st.markdown(
