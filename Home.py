@@ -11,9 +11,13 @@ Deploy: drop this folder into the same repo/server that serves the pathogen/KASP
 Streamlit tools, or run standalone:  streamlit run Home.py
 Requires: streamlit, py3Dmol, stmol, ipython_genutils, pandas, matplotlib, biopython
 """
+import os
 import streamlit as st
 
 st.set_page_config(page_title="P. natalensis genome portal", layout="wide")
+
+_LOGO = os.path.join(os.path.dirname(__file__), "assets", "mg_logo.png")
+st.logo(_LOGO, size="large", link="https://www.medicinalgenomics.com")
 
 st.title("*Psilocybe natalensis* — genome & pathway portal")
 st.markdown(
@@ -25,10 +29,10 @@ st.subheader("Pages")
 st.markdown("""
 | Page | What it shows |
 |---|---|
-| **1 · Genome re-analysis** | ONT run QC — per-barcode read comparison, yield, per-channel output, coverage & identity, mash species ID |
-| **2 · Trees & assembly** | Barcoding-locus phylogenies (ITS / EF1α / RPB1 / RPB2), specimen highlighted, + assembly statistics (yield, contigs, N50, fungal vs contaminant separation) |
-| **3 · Coding changes (genome-wide)** | Proteome-wide amino-acid divergence table, 12,589 genes vs *P. cubensis* |
-| **4 · Psilocybin cluster in 3D** | The psiD/psiH/psiM/psiT2/psiR cluster: substitutions painted on AlphaFold/ESMFold structures |
+| **1 · Trees & assembly** | Barcoding-locus phylogenies (ITS / EF1α / RPB1 / RPB2), specimen highlighted, + assembly statistics (yield, contigs, N50, fungal vs contaminant separation) |
+| **2 · Coding changes (genome-wide)** | Proteome-wide protein-vs-DNA identity scatter, 12,589 genes vs *P. cubensis*, gene-group highlighting + psilocybin-locus stars |
+| **3 · Psilocybin cluster in 3D** | The psiD/psiH/psiM/psiT2/psiR cluster: substitutions painted on AlphaFold/ESMFold structures |
+| **4 · Genome re-analysis** | ONT run QC — per-barcode read comparison, yield, coverage & identity, mash species ID. *(A small 550 Mb Rapid-library pilot; the 17 Gb assembly above used Ligation-based libraries.)* |
 """)
 
 st.info(
