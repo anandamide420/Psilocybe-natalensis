@@ -141,7 +141,7 @@ with st.expander("References"):
         "*(LC-MS: aeruginascin in P. mexicana / P. cyanescens and in P. cubensis; 4-OH-TMT not "
         "detected in any species; notes no WLP report pertains to P. cubensis. Full text "
         "verified.)*\n"
-        "- **Chadeayne AR, Pham DNK, Reid BG, Golen JA, Manke DR (2020).** Active Metabolite of "
+        "- **Chadeayne AR, Pham DNK, Reid BG, … Eguchi R (2020).** Active Metabolite of "
         "Aeruginascin (4-Hydroxy-*N,N,N*-trimethyltryptamine): Synthesis, Structure, and "
         "Serotonergic Binding Affinity. *ACS Omega* 5(27):16940–16943. "
         "doi:10.1021/acsomega.0c02208. *(high affinity at 5-HT1A/2A/2B, does **not** bind 5-HT3 "
