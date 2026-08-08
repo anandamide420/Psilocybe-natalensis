@@ -8,11 +8,11 @@ st.set_page_config(page_title="Genome re-analysis — QC", layout="wide")
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "genome_reanalysis.json")
 
 @st.cache_data
-def load():
-    with open(DATA_PATH) as f:
+def load(path):
+    with open(path) as f:
         return json.load(f)
 
-D = load()
+D = load(DATA_PATH)
 st.title("Genome re-analysis — sequencing run QC")
 
 # ---- top metrics ----

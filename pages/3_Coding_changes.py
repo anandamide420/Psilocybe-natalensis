@@ -8,11 +8,11 @@ st.set_page_config(page_title="Coding changes — genome-wide", layout="wide")
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "coding_changes_genomewide.json")
 
 @st.cache_data
-def load():
-    with open(DATA_PATH) as f:
+def load(path):
+    with open(path) as f:
         return json.load(f)
 
-D = load()
+D = load(DATA_PATH)
 df = pd.DataFrame(D["genes"])
 for c in ["protein_pct_id", "nt_pct_id", "nonsyn_fraction_pct", "copy_number",
           "loss_of_function_flag", "confident_LoF_flag", "n_synonymous",

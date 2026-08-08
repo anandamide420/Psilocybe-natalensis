@@ -7,11 +7,11 @@ st.set_page_config(page_title="Trees & assembly", layout="wide")
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "trees_assembly.json")
 
 @st.cache_data
-def load():
-    with open(DATA_PATH) as f:
+def load(path):
+    with open(path) as f:
         return json.load(f)
 
-D = load()
+D = load(DATA_PATH)
 figs = D.get("figs", {})
 newicks = D.get("newicks", [])
 

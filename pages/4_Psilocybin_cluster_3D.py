@@ -26,11 +26,11 @@ st.set_page_config(page_title="Psilocybin cluster — coding changes in 3D", lay
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "psilo_cluster_data.json")
 
 @st.cache_data
-def load():
-    with open(DATA_PATH) as f:
+def load(path):
+    with open(path) as f:
         return json.load(f)
 
-DATA = load()
+DATA = load(DATA_PATH)
 GENES = {g["gene"]: g for g in DATA["genes"]}
 ORDER = [g["gene"] for g in DATA["genes"]]
 
