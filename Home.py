@@ -7,9 +7,9 @@ Home / landing page. The four analysis pages live in pages/:
   3_Coding_changes.py      — genome-wide P. natalensis vs P. cubensis proteome comparison
   4_Psilocybin_cluster_3D.py — psilocybin biosynthesis cluster, 3D structures + variants
 
-Deploy: drop this folder into the same repo/server that serves the pathogen/KASP
-Streamlit tools, or run standalone:  streamlit run Home.py
-Requires: streamlit, py3Dmol, stmol, ipython_genutils, pandas, matplotlib, biopython
+Deploy: Streamlit Community Cloud (main file Home.py), or run standalone:
+  streamlit run Home.py
+Requires: streamlit only (each page embeds a self-contained interactive HTML report).
 """
 import os
 import streamlit as st
@@ -20,9 +20,28 @@ _LOGO = os.path.join(os.path.dirname(__file__), "assets", "mg_logo.png")
 st.logo(_LOGO, size="large", link="https://www.medicinalgenomics.com")
 
 st.title("*Psilocybe natalensis* — genome & pathway portal")
+st.caption("Medicinal Genomics · in-house Oxford Nanopore sequencing")
+
+st.subheader("Abstract")
 st.markdown(
-    "An in-house Oxford Nanopore assembly of *Psilocybe natalensis*, compared against the "
-    "*P. cubensis* reference. Use the sidebar to open each analysis."
+    "We report a draft whole-genome assembly of *Psilocybe natalensis* generated in-house "
+    "from Oxford Nanopore long reads (Ligation-based libraries, ~17 Gb of sequence), and a "
+    "genome-wide comparison against the *P. cubensis* “Penis Envy” reference "
+    "(RefSeq GCF_017499595.1). Across **12,589** orthologous genes the coding sequence is "
+    "**~87% identical** at the DNA level; because only about **29%** of coding-sequence "
+    "substitutions are nonsynonymous, the encoded proteins are **~90% identical** — the "
+    "signature of purifying selection acting on a genome-wide scale. Four barcoding loci "
+    "(ITS, EF1α, RPB1, RPB2) place our specimen with the authentic *P. natalensis* type "
+    "material and its close relatives (*P. chuxiongensis*, *P. maluti*), distinct from "
+    "both *P. cubensis* and the recently described *P. ochraceocentrata* — the species "
+    "underlying material sold commercially as “Natal Super Strength.” We further resolve the "
+    "**psilocybin biosynthesis cluster** (psiD, psiH, psiM, psiT2, psiR) and map **122** "
+    "amino-acid substitutions relative to *P. cubensis* onto AlphaFold/ESMFold structures, "
+    "the majority in low-constraint regions rather than catalytic sites."
+)
+st.markdown(
+    "*Explore the four analyses from the sidebar. All figures are the original interactive "
+    "reports; hover, filter, rotate, and toggle as in the source.*"
 )
 
 st.subheader("Pages")
