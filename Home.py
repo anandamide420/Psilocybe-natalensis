@@ -135,13 +135,17 @@ st.markdown(
 )
 with st.expander("References"):
     st.markdown(
-        "- **Dörner S, Rogge K, Wick J, Hoffmeister D, *et al.* (2022).** Genetic Survey of "
-        "*Psilocybe* Natural Products. *ChemBioChem* 23. doi:10.1002/cbic.202200249. "
+        "- **Dörner S, Rogge K, Fricke J, … Hoffmeister D (2022).** Genetic Survey of "
+        "*Psilocybe* Natural Products. *ChemBioChem* 23(14):e202200249. "
+        "doi:10.1002/cbic.202200249. "
         "*(LC-MS: aeruginascin in P. mexicana / P. cyanescens and in P. cubensis; 4-OH-TMT not "
-        "detected in any species; notes no WLP report pertains to P. cubensis.)*\n"
-        "- **Chadeayne AR, Golen JA, Manke DR (2020).** Active Metabolite of Aeruginascin "
-        "(4-Hydroxy-*N,N,N*-trimethyltryptamine): Synthesis, Structure, and Serotonergic Binding "
-        "Affinity. *ACS Omega* 5:16940–16943. doi:10.1021/acsomega.0c02208.\n"
+        "detected in any species; notes no WLP report pertains to P. cubensis. Full text "
+        "verified.)*\n"
+        "- **Chadeayne AR, Pham DNK, Reid BG, Golen JA, Manke DR (2020).** Active Metabolite of "
+        "Aeruginascin (4-Hydroxy-*N,N,N*-trimethyltryptamine): Synthesis, Structure, and "
+        "Serotonergic Binding Affinity. *ACS Omega* 5(27):16940–16943. "
+        "doi:10.1021/acsomega.0c02208. *(high affinity at 5-HT1A/2A/2B, does **not** bind 5-HT3 "
+        "where activity had been predicted. Full text verified.)*\n"
         "- **McTaggart AR *et al.* (2024).** Wood-loving magic mushrooms (*P. subaeruginosa* "
         "group) from Australia are saprotrophic invaders in the Northern Hemisphere. "
         "*(source of the wood-lover clade we are integrating.)*\n"
