@@ -195,7 +195,7 @@ st.markdown(
 )
 st.markdown(
     "**Credits.** Stephen McLaughlin — ONT data analysis. "
-    "Caleb McKernan, Brendan Kane, Kevin McKernan, Yvonne Helbert and Juliana Carvallo — "
+    "Caleb McKernan, Brendan Kane, Kevin McKernan, Yvonne Helbert and Juliana Carvalho — "
     "DNA preps, library preps and ONT sequencing."
 )
 
