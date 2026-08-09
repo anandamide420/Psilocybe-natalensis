@@ -193,3 +193,25 @@ st.markdown(
 )
 
 st.caption("Data extracted from the standalone interactive HTML reports (MGC/Latest).")
+
+st.divider()
+st.subheader("Appendix — source material")
+st.markdown(
+    "The sequenced material was a single commercial *P. natalensis* spore syringe "
+    "(**Mass Mycology, batch A072403**, “For Research Purposes Only”). We barcoded this genome "
+    "at four loci before drawing conclusions because Bradshaw *et al.* had shown that most "
+    "deposited commercial “natalensis” sequences are in fact *P. ochraceocentrata*; this vial "
+    "resolved within the genuine *P. natalensis* complex. Photographs of the source vial are "
+    "provided below as a provenance record."
+)
+_A_FRONT = os.path.join(os.path.dirname(__file__), "assets", "vial_front.jpeg")
+_A_BATCH = os.path.join(os.path.dirname(__file__), "assets", "vial_batch.jpeg")
+_c1, _c2 = st.columns(2)
+with _c1:
+    st.image(_A_FRONT, caption="Source vial — label face: “P. Natalensis”, Mass Mycology.",
+             use_container_width=True)
+with _c2:
+    st.image(_A_BATCH, caption="Source vial — batch A072403, “For Research Purposes Only”.",
+             use_container_width=True)
+st.caption("Provenance: commercial spore syringe, single specimen (n = 1). Identity established "
+           "by four-locus barcoding of this genome, not by the vendor label.")
