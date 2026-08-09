@@ -101,11 +101,46 @@ st.info(
     "[fastq_runid_5c74a372…concat.fastq.gz]"
     "(https://mgcdata.s3.amazonaws.com/shared/fastq_runid_5c74a372-b8e7-4ae3-9a32-a46cf34d2eef-concat.fastq.gz) "
     "(~15.9 GB gzipped ONT reads). "
+    "Assembly FASTAs: "
+    "[natalensis.purged.fa.gz]"
+    "(https://raw.githubusercontent.com/anandamide420/Psilocybe-natalensis/main/assets/data/natalensis.purged.fa.gz) "
+    "(purged primary, ~15 MB) and "
+    "[natalensis.hap.fa.gz]"
+    "(https://raw.githubusercontent.com/anandamide420/Psilocybe-natalensis/main/assets/data/natalensis.hap.fa.gz) "
+    "(purged haplotigs, ~3 MB). "
     "We are currently integrating the *P. subaeruginosa* data from McTaggart *et al.* — the "
     "Australian wood- and dung-inhabiting clade linked to Wood Lovers Paralysis — for direct "
     "psilocybin-cluster comparison, and **this page will continue to update** as the full "
     "17 Gb assembly and additional taxa are analyzed.",
     icon="🔄",
+)
+
+st.subheader("Assembly statistics")
+st.caption(
+    "*Psilocybe cf. natalensis* · sample PNAT-ac77a0 · clean draft (pre-purge), "
+    "as reported by the assembly pipeline."
+)
+_c1, _c2, _c3 = st.columns(3)
+_c1.metric("Clean draft", "59.61 Mb")
+_c2.metric("Contigs / N50", "946 / 154,706")
+_c3.metric("BUSCO complete", "97.7%")
+_c4, _c5, _c6 = st.columns(3)
+_c4.metric("Contaminant", "64.7%")
+_c5.metric("Sequencing runs", "1")
+_c6.metric("Assembled", "2026-08-06")
+st.caption(
+    "The **64.7% contaminant** fraction is largely bacterial microbiome carried through "
+    "from the fruiting body; the downloadable purged primary assembly is the decontaminated "
+    "fungal genome. BUSCO and contaminant values are as reported by the pipeline on the clean draft."
+)
+
+st.subheader("Read-length vs quality (ONT)")
+st.image(
+    "assets/qc_readlen_phred.png",
+    caption="Basecalled read length vs PHRED quality for the ligation-based ONT run "
+    "(median ≈ 2 kb at Q21; the main density extends past 10 kb — the long reads needed "
+    "to resolve a divergent, repeat-rich fungal genome).",
+    use_container_width=True,
 )
 
 st.divider()
