@@ -97,7 +97,10 @@ st.info(
 )
 
 st.info(
-    "**Data availability & roadmap.** Raw DNA sequence data will be made available shortly. "
+    "**Data availability & roadmap.** Raw ONT sequence reads (concatenated FASTQ) are available here: "
+    "[fastq_runid_5c74a372…concat.fastq.gz]"
+    "(https://mgcdata.s3.amazonaws.com/shared/fastq_runid_5c74a372-b8e7-4ae3-9a32-a46cf34d2eef-concat.fastq.gz) "
+    "(~15.9 GB gzipped ONT reads). "
     "We are currently integrating the *P. subaeruginosa* data from McTaggart *et al.* — the "
     "Australian wood- and dung-inhabiting clade linked to Wood Lovers Paralysis — for direct "
     "psilocybin-cluster comparison, and **this page will continue to update** as the full "
