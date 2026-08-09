@@ -193,8 +193,9 @@ st.subheader("Resources & credits")
 st.markdown(
     "- **[psilocydia.net](https://psilocydia.net/)** — 117 public *Psilocybe* genomes; a "
     "community resource for the genetic diversity and origin of the magic mushroom.\n"
-    "- **Companion write-up:** *Psilocybe Structural Genomics — can the Psilocybe diaspora "
-    "inform on Wood Lovers Paralysis?* (Substack — link to be added)."
+    "- **Companion write-up:** [*Psilocybe Structural Genomics — can the Psilocybe diaspora "
+    "inform on Wood Lovers Paralysis?*]"
+    "(https://anandamide.substack.com/p/psilocybe-structural-genomics) (Substack)."
 )
 st.markdown(
     "**Credits.** Stephen McLaughlin — ONT data analysis. "
