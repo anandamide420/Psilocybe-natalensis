@@ -22,6 +22,13 @@ st.logo(_LOGO, size="large", link="https://www.medicinalgenomics.com")
 st.title("*Psilocybe natalensis* — genome & pathway portal")
 st.caption("Medicinal Genomics · in-house Oxford Nanopore sequencing")
 
+_HERO = os.path.join(os.path.dirname(__file__), "assets", "hero_landing.png")
+_hl, _hc, _hr = st.columns([1, 2, 1])
+with _hc:
+    st.image(_HERO, use_container_width=True,
+             caption="P. natalensis and the out-of-Africa diaspora of the P. cubensis lineage, "
+                     "read by long-read (Oxford Nanopore) sequencing. (Illustrative artwork.)")
+
 st.subheader("Abstract")
 st.markdown(
     "*Psilocybe natalensis* is an African relative of the domesticated “magic mushroom” "
