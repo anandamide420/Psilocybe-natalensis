@@ -298,13 +298,15 @@ function scatter(){svg.innerHTML="";
     const lb=el("text",{x:(X(r.nt)+10).toFixed(1),y:(Y(r.pid)+9).toFixed(1),"font-size":10.5,
       fill:col("--psi"),"font-family":"ui-monospace","font-weight":700,"paint-order":"stroke",
       stroke:col("--surface"),"stroke-width":3});lb.textContent=r.g||r.lt;svg.appendChild(lb);});
-  pts.filter(r=>GOI.has(r.lt)).forEach(r=>{
-    const st=el("text",{x:X(r.nt).toFixed(1),y:(Y(r.pid)+5).toFixed(1),"text-anchor":"middle",
+  GOI.forEach((label,lt)=>{const r=byLt[lt];if(!r)return;
+    const off=(r.nt==null||r.nt<60||r.pid<60),xv=off?62:r.nt,yv=off?62:r.pid,px=X(xv),py=Y(yv);
+    const st=el("text",{x:px.toFixed(1),y:(py+5).toFixed(1),"text-anchor":"middle",
       "font-size":15,fill:"#c026d3","paint-order":"stroke",stroke:col("--surface"),"stroke-width":3.5});
     st.textContent="\u25c6";st.style.cursor="pointer";st.addEventListener("click",()=>openGene(r));svg.appendChild(st);
-    const lb=el("text",{x:(X(r.nt)+10).toFixed(1),y:(Y(r.pid)+9).toFixed(1),"font-size":10.5,
+    const txt=off?(label+" \u2199 off-scale: "+r.pid+"% prot, DNA id N/A"):label;
+    const lb=el("text",{x:(px+10).toFixed(1),y:(py+9).toFixed(1),"font-size":10.5,
       fill:"#c026d3","font-family":"ui-monospace","font-weight":700,"paint-order":"stroke",
-      stroke:col("--surface"),"stroke-width":3});lb.textContent=GOI.get(r.lt);svg.appendChild(lb);});
+      stroke:col("--surface"),"stroke-width":3});lb.textContent=txt;svg.appendChild(lb);});
   if(q){const t=el("text",{x:W-14,y:m-16,"text-anchor":"end","font-size":11,fill:col("--brand"),
     "font-family":"ui-monospace","font-weight":600});t.textContent=hot.length+" match"+(hot.length===1?"":"es");svg.appendChild(t);}}
 // table
