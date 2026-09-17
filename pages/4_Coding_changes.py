@@ -29,7 +29,9 @@ def load_html(path):
 st.title("Coding changes — P. natalensis vs P. cubensis")
 st.caption("Interactive report — the original d3 scatter, embedded. Every gene = one point "
            "(protein vs DNA identity). Highlight gene groups, star the psilocybin locus, search, "
-           "and filter by named-function / LoF.")
+           "and filter by named-function / LoF. "
+           "Two homeodomain / mating-type genes of interest are marked with a magenta \u25c6 "
+           "(MAT A-\u03b1 Y4, JR316_0000580; Homeobox 10, JR316_0000396) \u2014 searchable by locus tag.")
 
 try:
     html = load_html(HTML_PATH)
